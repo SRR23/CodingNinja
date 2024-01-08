@@ -1,14 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool cmp(const vector<int> &v1, const vector<int> &v2)
-{
-    if (v1[0] == v2[0])
-    {
-        return v1[1] < v2[1];
-    }
-    return v1[0] < v2[0];
-}
+// Both solution has complexity N^2.
+// But space complexity is better in BruteForce
+
+// etai optimal solution, karon array size 1e3. BruteForce e standard
+// vector<vector<int>> pairSum(vector<int> &a, int s)
+// {
+//     vector<vector<int>> v;
+//     sort(a.begin(),a.end());
+//     for(int i=0;i<a.size();i++)
+//     {
+//        for(int j=i+1;j<a.size();j++)
+//        {
+//           if(a[i]+a[j]==s)
+//           {
+//              v.push_back({{a[i],a[j]}});
+//           }
+//        }
+//     }
+//     return v;
+// }
 
 vector<vector<int>> pairSum(vector<int> &a, int s)
 {
